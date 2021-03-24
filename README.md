@@ -1,8 +1,12 @@
 # qi-px2vw-loader
 A webpack loader, transfer px to vw in stylesheet.
+## Install 
+``` 
+npm install qi-px2vw-loader --save-dev
+```
 
-### Examples
-1. Transform px to vw in css  
+## Examples
+### 1. Transform px to vw in css  
 webpack configs: 
 ``` 
   module: {
@@ -16,7 +20,8 @@ webpack configs:
     }]
   }
 ````
-2. Transform px to vw in sass:  
+
+### 2. Transform px to vw in sass:  
 webpack configs: 
 ``` 
   module: {
@@ -31,7 +36,8 @@ webpack configs:
     }]
   }
 ```
-3. Transform px to vw in vue:   
+
+### 3. Transform px to vw in vue:   
 webpack configs: 
 ``` 
   module: {
