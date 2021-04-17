@@ -15,7 +15,13 @@ webpack configs:
       use: [
         {loader: 'style-loader'},
         {loader: 'css-loader'},
-        {loader: path.resolve(__dirname, './loaders/px2vw')}
+        {
+          loader: 'qi-px2vw-loader',
+          options: {
+            // exclude some files which need not tranform
+            exclude: /node_modules/
+          }
+        }
       ],
     }]
   }
@@ -31,7 +37,12 @@ webpack configs:
         {loader: 'style-loader'},
         {loader: 'css-loader'},
         {loader: 'sass-loader'},
-        {loader: path.resolve(__dirname, './loaders/px2vw')}
+        {loader: 
+          loader: 'qi-px2vw-loader',
+          options: {
+            exclude: /node_modules/
+          }
+        }
       ],
     }]
   }
