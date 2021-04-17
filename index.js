@@ -47,12 +47,11 @@ const px2vw = function (source) {
     decimal:3
   }, getQueryString(this.query))
   var matchPXExp = /([0-9.]+px)([;,| |}|'|"\)\r|\n])/g
-
-  if (options.include && !testRegExpOrGlob(options.include)) {
+  if (options.include && !testRegExpOrGlob(this.resourcePath, options.include)) {
     return source
   }
 
-  if (options.exclude && testRegExpOrGlob(options.exclude)) {
+  if (options.exclude && testRegExpOrGlob(this.resourcePath, options.exclude)) {
     return source
   }
 
