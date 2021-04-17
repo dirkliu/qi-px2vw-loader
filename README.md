@@ -58,7 +58,7 @@ webpack configs:
       options: {
         loaders: {
           css: ['vue-style-loader', 'css-loader', {
-            loader: path.resolve(__dirname, './loaders/px2vw')
+            loader: 'qi-px2vw-loader'
           }],
           scss: ['vue-style-loader', 'css-loader', 'sass-loader', {loader: path.resolve(__dirname, './loaders/px2vw')}]
         }
